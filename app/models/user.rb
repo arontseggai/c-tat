@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :favorites
+  has_many :quotes, through: :favorites
+
   devise :database_authenticatable, :omniauthable, omniauth_providers: [:facebook]
 
   def self.find_for_facebook_oauth(auth)

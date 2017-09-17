@@ -4,4 +4,9 @@ class QuoteController < ApplicationController
   def random
     @quote = Quote.order("RANDOM()").first    
   end
+
+  def favorites
+    @favorites = current_user.quotes
+    puts @favorites 
+  end
 end

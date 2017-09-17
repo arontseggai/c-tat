@@ -1,11 +1,11 @@
   div class="navbar-fixed"
     nav
       div class="nav-wrapper"
-        a href="#!" class="brand-logo" Logo
+        a href="/" class="brand-logo" Logo
         ul class="right hide-on-med-and-down"
             - if user_signed_in?
                 li
-                    a href="stuff" See favorite quotes
+                    = link_to 'See your favorites', favorites_path
                 li 
                     = link_to 'Logout', destroy_user_session_path, method: :delete                
             - else

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   root to: 'quote#random'
   
+  get '/favorites/', to: 'quote#favorites', as: 'favorites'
 end
