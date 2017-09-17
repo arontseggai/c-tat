@@ -1,13 +1,17 @@
   div class="navbar-fixed"
     nav
       div class="nav-wrapper"
-        a href="/" class="brand-logo" Logo
+        a href="/" class="brand-logo" C/TAT
         ul class="right hide-on-med-and-down"
             - if user_signed_in?
+                li
+                    = link_to 'See random quote', '/'           
                 li
                     = link_to 'See your favorites', favorites_path
                 li 
                     = link_to 'Logout', destroy_user_session_path, method: :delete                
             - else
+                li
+                    = link_to 'See random quote', '/'                     
                 li
                     = link_to "Sign in with facebook", user_facebook_omniauth_authorize_path

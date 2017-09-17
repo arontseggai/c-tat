@@ -13,11 +13,9 @@ gem 'httparty'
 
 gem "slim-rails"
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'materialize-sass'
-gem 'simple_form'
 gem 'uglifier'
 
 

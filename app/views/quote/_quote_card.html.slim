@@ -1,0 +1,5 @@
+div class="card"         
+    h4  = @quote.content
+    p   - #{@quote.author}
+    - if user_signed_in? && !@quote.favorites.exists?(:user_id => current_user.id)
+        = link_to "Like", like_quote_path(@quote), remote: true, :id => "ajax_trigger"

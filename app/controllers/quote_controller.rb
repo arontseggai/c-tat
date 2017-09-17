@@ -6,7 +6,7 @@ class QuoteController < ApplicationController
   end
 
   def favorites
-    @favorites = current_user.quotes
-    puts @favorites 
+    @favorite_quotes = current_user.quotes
+    puts @favorite_quotes 
   end
 end
